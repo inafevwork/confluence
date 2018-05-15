@@ -11,6 +11,7 @@ RUN mkdir /opt && \
     && apk del --purge wget gzip \
     && rm -rf /var/cache/apk/* \
     && echo "confluence.home=/data" >	/opt/confluence/WEB-INF/classes/confluence-init.properties \
+    && sed -i 's,<session-timeout>.*</session-timeout>,<session-timeout>300</session-timeout>,' /opt/confluence/WEB-INF/web.xml \
     && adduser -D -h /data confluence confluence \
     && chown -R confluence.confluence /opt \
     && chgrp -R 0 /data /opt \
