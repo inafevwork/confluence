@@ -1,7 +1,7 @@
 FROM mwaeckerlin/base
 
 # version: see https://www.atlassian.com/software/confluence/download
-ARG CONFLUENCE_VERSION="6.8.1"
+ARG CONFLUENCE_VERSION="6.9.0"
 ARG DOWNLOAD_URL="http://www.atlassian.com/software/confluence/downloads/binary/atlassian-confluence-${CONFLUENCE_VERSION}.tar.gz"
 
 ENV CATALINA_OUT /dev/stdout
